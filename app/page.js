@@ -12,9 +12,10 @@ export default function Home() {
     if (email.length == 0) {
       e.preventDefault()
       setMessage("Email can't be blank.")
-    } else {
-      e.preventDefault()
-      router.push('/success')
+    } else if 
+      (email.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+        e.preventDefault()
+        router.push('/success')
     }
   }
 
@@ -32,6 +33,7 @@ export default function Home() {
         >
         </input>
         <button 
+          type="submit"
           className="flex gap-2 px-6 items-center py-3 text-black text-sm font-light bg-slate-50 mb-8"
           onClick={(e) => handleSubmitButton(e)}
           >
