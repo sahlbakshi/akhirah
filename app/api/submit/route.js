@@ -14,7 +14,7 @@ export async function POST(request) {
         const auth = new google.auth.GoogleAuth({
         credentials: {
             client_email: process.env.CLIENT_EMAIL,
-            private_key: process.env.PRIVATE_KEY
+            private_key: process.env.PRIVATE_KEY.replace(/\\n/g, '\n')
         },
         scopes: [
             'https://www.googleapis.com/auth/drive',
