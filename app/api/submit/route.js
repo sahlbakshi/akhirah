@@ -26,13 +26,25 @@ export async function POST(request) {
             auth,
             version: 'v4'
         })
+        const date = new Date()
+        const day = date.toLocaleDateString('en-US', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+        })
+        const time = date.toLocaleTimeString('en-US', {
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: true
+        })
+
         const response = await sheets.spreadsheets.values.append({
             spreadsheetId: process.env.SPREADSHEET_ID,
-            range: 'A1:A1',
+            range: 'A1:C1',
             valueInputOption: 'USER_ENTERED',
             requestBody: {
                 values: [
-                    [body["email"]]
+                    [day, time, body["email"]]
                 ]
             }
         })
