@@ -8,14 +8,26 @@ export default function Home() {
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
 
-  const handleSubmitButton = (e) => {
+  const handleSubmitButton = async (e) => {
     if (email.length == 0) {
       e.preventDefault()
       setMessage("Email can't be blank.")
     } else if 
       (email.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
         e.preventDefault()
-        router.push('/success')
+        const response = await fetch("http://localhost:3000/api/submit", {
+          method:'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({"email": email})
+        })
+
+        if (response.status == 200) {
+          router.push('/success') 
+        } else {
+          setMessage("Please try again.")
+        }
     }
   }
 
