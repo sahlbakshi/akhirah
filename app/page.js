@@ -15,7 +15,7 @@ export default function Home() {
     } else if 
       (email.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
         e.preventDefault()
-        const response = await fetch("https://akhirah.vercel.app/api/submit", {
+        const response = await fetch("http://localhost:3000/api/submit", {
           method:'POST',
           headers: {
             'Content-Type': 'application/json'

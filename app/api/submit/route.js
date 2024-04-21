@@ -27,12 +27,12 @@ export async function POST(request) {
             version: 'v4'
         })
         const date = new Date()
-        const day = date.toLocaleDateString('en-US', {
+        const day = date.toLocaleDateString('en-CA', {
             day: 'numeric',
             month: 'long',
             year: 'numeric'
         })
-        const time = date.toLocaleTimeString('en-US', {
+        const time = date.toLocaleTimeString('en-CA', {
             hour: '2-digit',
             minute: '2-digit',
             hour12: true
