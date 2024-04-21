@@ -9,13 +9,6 @@ export async function GET() {
 
 export async function POST(request) {
     const body = await request.json()
-    return new Response(
-        { 
-            "CLIENT_EMAIL": process.env.CLIENT_EMAIL,
-            "PRIVATE_KEY": process.env.PRIVATE_KEY,
-            "SPREADSHEET_ID": process.env.SPREADSHEET_ID,
-        }
-    )
 
     try {
         const auth = new google.auth.GoogleAuth({
