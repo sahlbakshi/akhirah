@@ -9,9 +9,13 @@ export async function GET() {
 
 export async function POST(request) {
     const body = await request.json()
-    console.log(process.env.CLIENT_EMAIL)
-    console.log(process.env.PRIVATE_KEY)
-    console.log(process.env.SPREADSHEET_ID)
+    return new Response(
+        { 
+            "CLIENT_EMAIL": process.env.CLIENT_EMAIL,
+            "PRIVATE_KEY": process.env.PRIVATE_KEY,
+            "SPREADSHEET_ID": process.env.SPREADSHEET_ID,
+        }
+    )
 
     try {
         const auth = new google.auth.GoogleAuth({
