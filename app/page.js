@@ -55,8 +55,8 @@ export default function Home() {
       </form>
       <div className="mb-24 sm:mb-28 text-xs">*waitlist gets early access email</div>
       <div className="flex gap-2 items-center">
-        <a href="https://www.tiktok.com/@akhirahathletic?_t=8li8jjt4nLy&_r=1" target="_blank" rel="noopener noreferrer"><img className="w-6" src="/images/instagram.png"></img></a>
-        <a href="https://www.instagram.com/akhirahathletic?igsh=MTlrNzZxdGcwMnNrYQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer"><img className="w-6" src="/images/tiktok.png"></img></a>
+        <a href="https://www.instagram.com/akhirahathletic?igsh=MTlrNzZxdGcwMnNrYQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer"><img className="w-6" src="/images/instagram.png"></img></a>
+        <a href="https://www.tiktok.com/@akhirahathletic?_t=8li8jjt4nLy&_r=1" target="_blank" rel="noopener noreferrer"><img className="w-6" src="/images/tiktok.png"></img></a>
       </div>
     </div>
   )
