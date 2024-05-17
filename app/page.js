@@ -33,7 +33,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center sm:mt-28 mt-14">
-      <div className="text-2xl sm:text-3xl mb-24 sm:mb-28 flex gap-4">
+      <div className="text-2xl sm:text-3xl mb-24 sm:mb-28 flex gap-2">
         <div className="font-hoves">AKHIRAH</div>
         <div className="font-hovesbold">ATHLETIC</div>
       </div>
