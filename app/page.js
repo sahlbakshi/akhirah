@@ -33,10 +33,15 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center sm:mt-28 mt-14">
-      <div className="text-2xl sm:text-3xl mb-24 sm:mb-28 flex gap-2">
-        <div className="font-hoves">AKHIRAH</div>
-        <div className="font-hovesbold">ATHLETIC</div>
-      </div>
+      {
+        /*
+        <div className="text-2xl sm:text-3xl mb-24 sm:mb-28 flex gap-2">
+          <div className="font-hoves">AKHIRAH</div>
+          <div className="font-hovesbold">ATHLETIC</div>
+        </div>
+        */
+      }
+      <img className="w-[240px] sm:w-[300px] mb-24 sm:mb-28" src="/images/logo.jpg"></img>
       <div className={`text-[24px] sm:text-[28px] font-semibold ${message != "" ? "mb-10" : "mb-14"}`}>WAITLIST FOR OUR DROP</div>
       {message != "" ? <div className="w-64 text-center bg-red-100 text-red-900 font-semibold py-6">{message}</div> : null}
       <form className="flex flex-col items-center">
